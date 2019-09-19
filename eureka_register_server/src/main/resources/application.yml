@@ -1,0 +1,13 @@
+spring:
+  config:
+    name: 'eureka_register_server'
+eureka:
+  instance:
+    hostname:localhost
+  client:
+    registerWithEureka: false;
+    retchRegistry: false
+
+server:
+  port:1111
+

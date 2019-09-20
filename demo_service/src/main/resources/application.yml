@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: demo-service
+  cloud:
+    config:
+      uri: http://localhost:8000
+      fail-fast: true
+
+  profiles: cloud
+
+eureka:
+  client:
+#    registerWithEureka: false
+#    fetchRegistry: false
+    instance:
+      appname: demo-service
+server:
+  port: 8000

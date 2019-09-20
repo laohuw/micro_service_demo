@@ -16,7 +16,7 @@ public class ServiceInstanceController {
     @Autowired
     private DiscoveryClient discoveryClient;
 
-    @RequestMapping("{applicationName")
+    @RequestMapping("{applicationName}")
     public List<ServiceInstance> serviceInstanceByName(@PathVariable String applicationName){
         return this.discoveryClient.getInstances(applicationName);
     }

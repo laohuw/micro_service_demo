@@ -15,6 +15,7 @@ public class DemoClientApplication {
 
 
     public static void main(String[] args){
+        System.setProperty("server.port", "8088");
         SpringApplication.run(DemoClientApplication.class, args);
     }
 }

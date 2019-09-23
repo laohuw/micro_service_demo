@@ -1,18 +1,21 @@
+server:
+  port: 8001
 spring:
   application:
     name: demo-service
-  cloud:
-    config:
-      uri: http://localhost:8000
-      fail-fast: true
-
-  profiles: cloud
-
+#  profiles: cloud
+#  cloud:
+#    config:
+#      uri: http://localhost:8000
+#      fail-fast: true
 eureka:
-  client:
+#  client:
+#    serviceUrl: http://localhost:8761/eureka/
+  instance:
+    metadataMap:
+      instanceId: instance2
+
 #    registerWithEureka: false
 #    fetchRegistry: false
-    instance:
-      appname: demo-service
-server:
-  port: 8000
+#    instance:
+#      appname: demo-service

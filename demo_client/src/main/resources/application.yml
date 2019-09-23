@@ -1,5 +1,8 @@
 server:
-  port: 8088
+  port: 8089
+spring:
+  application:
+    name: demo-client
 feign:
   client:
     config:
@@ -11,3 +14,10 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
+
+demo-service:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: localhost:8761,localhost:8661,localhost:8561
+    ServerListRefreshInterval: 5000
